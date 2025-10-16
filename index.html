@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ASTAR NGA Dashboard</title>
+  <title>ASTAR NGA Dashboard — New</title>
   <script type="module" src="https://us-east-1.online.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: #D7DCE5;
+      background: linear-gradient(to bottom right, #D7DCE5, #f3f4f6);
       font-family: Arial, sans-serif;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      height: 100vh;
     }
 
     header {
@@ -21,7 +21,7 @@
       width: 100%;
       padding: 10px 20px;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
     }
 
@@ -30,17 +30,13 @@
     }
 
     .viz-container {
-      width: 95%;
-      max-width: 1100px;
-      height: 90vh;
+      flex: 1; /* take remaining vertical space */
+      width: 100%;
       background: #fff;
-      margin: 20px auto;
+      margin: 0 auto;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
       overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
 
     tableau-viz {
@@ -52,21 +48,19 @@
 </head>
 <body>
 
-<header>
-  <div class="logo">
-    <img src="https://raw.githubusercontent.com/hamza-habib-qult/Astar-Dashboard/main/d6979d750c14ba29ecf714b17f77567ca74277fe.png" alt="ASTAR Logo" />
-  </div>
-</header>
+  <header>
+    <div class="logo">
+      <img src="https://raw.githubusercontent.com/hamza-habib-qult/Astar-Dashboard/main/d6979d750c14ba29ecf714b17f77567ca74277fe.png" alt="ASTAR Logo" />
+    </div>
+  </header>
 
-<div class="viz-container">
-  <tableau-viz
-    id="tableau-viz"
-    src="https://us-east-1.online.tableau.com/t/astar_analytics/views/ASTAR_NGA_17533932489220/Dashboard1/7bd053a4-bfdd-4c96-bd88-a0106bd49bbe/f1f254d7-c882-42b3-ba1b-ffa0cdc93182?:embed=yes&:tabs=no&:showVizHome=no"
-    toolbar="bottom"
-    width="1100"
-    height="840"
-  ></tableau-viz>
-</div>
+  <div class="viz-container">
+    <tableau-viz
+      id="tableau-viz"
+      src="https://us-east-1.online.tableau.com/t/astar_analytics/views/ASTAR_NGA_NEW/Dashboard1?:embed=yes&:tabs=no&:showVizHome=no"
+      toolbar="hidden"
+    ></tableau-viz>
+  </div>
 
 </body>
 </html>
